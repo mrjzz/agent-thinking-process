@@ -1,7 +1,6 @@
-import sys
-sys.path.append("D:/code-base/notes/notes-1/ai-agent-python")
 
-from test6.tool import BaseTool
+
+from v6.tool import BaseTool
 
 class SummarizeTool(BaseTool):
     def __init__(self, description, parameters):

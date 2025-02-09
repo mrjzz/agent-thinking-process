@@ -1,7 +1,6 @@
-import sys
-sys.path.append("D:/code-base/notes/notes-1/ai-agent-python")
 
-from test6.tool import BaseTool
+
+from v6.tool import BaseTool
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
