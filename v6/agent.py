@@ -30,14 +30,17 @@ class Agent:
                 args = json.loads(func_param.arguments)
                 res = tool.call_tool(args)
                 self.messages.append({
-                    "role": "user",
+                    "role": "assistant",
                     "content": res
                 })
             else:
+                self.messages.append({
+                    "role": "user",
+                    "content": tool.description
+                })
                 completion = self.llm.chat.completions.create(
                     model=self.model,
-                    messages=self.messages,
-                    tools=tool.generate_description()
+                    messages=self.messages
                 )
                 response = completion.choices[0].message
                 self.messages.append({

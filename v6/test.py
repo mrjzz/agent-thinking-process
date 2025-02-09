@@ -8,7 +8,7 @@ from tools.web_search_tool import WebSearchTool
 from tools.summarize_tool import SummarizeTool
 
 search_web_tool = WebSearchTool(description="scrape the https://news.qq.com/", parameters=["url"])
-summarize_tool = SummarizeTool(description="", parameters=[""])
+summarize_tool = SummarizeTool(description="总结上一条prompt内容", parameters=[""])
 user_prompt = "please scrape the web info from https://news.qq.com/ and summarize the results"
 
 client = OpenAI(

@@ -46,7 +46,7 @@ class WebSearchTool(BaseTool):
             WebDriverWait(self.driver, 1000).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, "div.channel-feed-list"))
             )
-            return self.driver.page_source[:8000] + ", 请总结新闻为md格式"
+            return self.driver.page_source
         except Exception as e:
             print(f"爬取失败: {str(e)}")
             return ""
